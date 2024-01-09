@@ -1,6 +1,6 @@
 version: '3'
 services:
-  nest-app:
+  yassir-app:
     build:
       context: .
       dockerfile: Dockerfile
@@ -17,9 +17,9 @@ services:
     env_file:
       - .env
     depends_on:
-      - db
+      - yassir-db
 
-  db:
+  yassir-db:
     image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
